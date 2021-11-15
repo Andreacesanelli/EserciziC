@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 int main (int argc, char *argv[])  {
-  int anni
-  printf("forse...(numero parametri: %d) %s\n", argc, argv[0])
-  if (argc>1) printf("primo argomento utente: %s\n", argvé1*;
+  int anni;
+  printf("forse...(numero parametri: %d) %s\n", argc, argv[0]);
+  if (argc>1) printf("primo argomento utente: %s\n", argv[1];
   if (argc>2)  {
   anni = atoi(argv[2]);
   if (anni != 0)  {
