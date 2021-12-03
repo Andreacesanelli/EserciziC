@@ -26,7 +26,7 @@ char file;
     file=fopen(argv[1],"r");
     if(file==NULL)
     {
-        printf("il file %s non esiste nella posizione indicata\n",argv[1]);  //controlla se il file non esiste
+        printf("il file %s non esiste\n",argv[1]);  //controlla se il file non esiste
         exit(-3);
     }
     int count=0;
