@@ -5,11 +5,12 @@
 int main(int argc, char *argv[])
 {
 
-char Riga[argv[2]];
+char riga[31];
 char file; 
+int count=0;
  
 
-    if(argc<1)
+    if(argc<2)
     {
         printf("inserire nome file\n");
         exit(-1);
@@ -29,10 +30,10 @@ char file;
         printf("il file %s non esiste\n",argv[1]);  //controlla se il file non esiste
         exit(-3);
     }
-    int count=0;
-    while(fgets(riga,sizeof(Riga),file)!=NULL)
+
+    while(fgets(riga,sizeof(riga),file)!=NULL)
     {
-        printf("%s\n",Riga);
+        printf("%s\n",riga);
         count=++1;
     }
     fclose(file);
