@@ -1,0 +1,5 @@
+
+
+inf fatt(int n);
+
+
