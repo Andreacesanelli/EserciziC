@@ -1,0 +1,174 @@
+//meglio fare tutte le funzioni come float anche se il risultato
+//e uguale sia come float che come void
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <locale.h>
+
+float somma();
+float sottrazione();
+float moltiplicazione();
+float divisione();
+float potenza();
+float basilicata();
+
+int main()
+{
+    int operatore;
+    do{
+
+    system("cls");
+    printf("\n");
+    printf("*********************************************************\n");
+    printf("******************** EASY CALCULATOR ********************\n");
+    printf("*********************************************************\n");
+    printf("\n\n");
+
+
+
+          do{
+    printf("  SCEGLI IL TIPO DI OPERAZIONE CHE VUOI ESEGUIRE: \n");
+    printf("  PER TERMINARE IL PROGRAMMA DIGITA........0 \n");
+    printf("  PER SOMMARE DIGITA.......................1 \n");
+    printf("  PER SOTTRARRE DIGITA.....................2 \n");
+    printf("  PER MOLTIPLICARE DIGITA..................3 \n");
+    printf("  PER DIVIDERE DIGITA......................4 \n");
+    printf("  PER ELEVARE A POTENZA DIGITA.............5 \n");
+    printf("  PER ESTRARRE RADICE DIGITA...............6 \n");
+    printf("                                       ->  ");
+    scanf("%d", &operatore);
+    printf("\n");
+          }while(operatore<0 || operatore >6);
+
+printf("\n");
+
+    switch (operatore) {
+
+        case 1:
+            somma();
+        break;
+
+        case 2:
+            sottrazione();
+        break;
+
+        case 3:
+            moltiplicazione();
+        break;
+
+        case 4:
+            divisione();
+        break;
+
+        case 5:
+            potenza();
+        break;
+
+        case 6:
+            basilicata();
+        break;
+    }
+
+    printf("\n");    printf("\n");
+    system("pause");
+    printf("\n");
+
+
+    }while(operatore!=0);
+
+
+    return 0;
+}
+
+float somma(){
+    float num1,num2, s;
+    printf("\n");
+    printf("  Stai eseguendo una somma ");
+    printf("\n");
+    printf("  Inserire il primo numero: ");
+    scanf("%f",&num1);
+    printf("\n  Inserire il secondo numero: ");
+    scanf("%f",&num2);
+    s=num1+num2;
+    printf("\n  La sommma dei due numeri e': %.2f",s);
+
+}
+
+float divisione(){
+    float num1,num2, s;
+    printf("\n");
+    printf("  Stai eseguendo una divisione ");
+    printf("\n");
+    printf("  Inserire il primo numero: ");
+    scanf("%f",&num1);
+    printf("\n  Inserire il secondo numero: ");
+    scanf("%f",&num2);
+    s=num1/num2;
+    if(num2==0) {
+            printf("\n  Impossibile dividere per 0");
+             }
+
+    else {
+    printf("\n  La divisione dei due numeri e': %.2f",s);}
+}
+
+float sottrazione(){
+    float num1,num2, s;
+    printf("\n");
+    printf("  Stai eseguendo una sottrazione ");
+    printf("\n");
+    printf("  Inserire il primo numero: ");
+    scanf("%f",&num1);
+    printf("\n  Inserire il secondo numero: ");
+    scanf("%f",&num2);
+    s=num1-num2;
+    printf("\n  La sottrazione dei due numeri e': %.2f",s);
+}
+
+float moltiplicazione(){
+    float num1,num2, s;
+    printf("\n");
+    printf("  Stai eseguendo una moltiplicazione ");
+    printf("\n");
+    printf("  Inserire il primo numero: ");
+    scanf("%f",&num1);
+    printf("\n  Inserire il secondo numero: ");
+    scanf("%f",&num2);
+    s=num1*num2;
+    printf("\n  La moltiplicazione dei due numeri e': %.2f",s);
+}
+
+float potenza(){
+    float num0,num1,num2,i ;
+    printf("\n");
+    printf("  Stai eseguendo un elevamento a potenza ");
+    printf("\n");
+    printf("  Inserire la base: ");
+    scanf("%f",&num1);
+    num0=num1;
+    printf("\n  Inserire l'esponente: ");
+    scanf("%f",&num2);
+
+    if(num2==0) { num1=1; }
+    if(num2>1) {
+                for(i=1;i<num2;i++){
+                num1=num1*num0;
+               }
+             }
+    printf("\n  La base %.2f elevata a %.0f e': %.0f",num0,num2,num1);
+}
+
+float basilicata(){
+    float num1,num2, s;
+    printf("\n");
+    printf("  Stai estraendo una radice ");
+    printf("\n");
+    printf("  Inserire il radicando: ");
+    scanf("%f",&num1);
+    printf("\n  Inserire l'esponente: ");
+    scanf("%f",&num2);
+    s= pow (num1 ,1/num2);
+    printf("\n  La radice %.2f di %.2f e': %.2f",num2,num1,s);
+}
+
+//fine codice rettificato
